@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes cpos {
+            0% {
+                transform: rotate(0) translate(100px, 100px) ;
+                background: #102bf7;
+                border-radius: 25px;
+            }
+            25% {
+                transform:  rotate(90deg) translate(100px, 100px);
+                background: #00ff45;
+                border-radius: 50px;
+            }
+            50% {
+                transform:  rotate(180deg) translate(100px, 100px) ;
+                background: #ff0000;
+                border-radius: 0px;
+            }
+            75% {
+                transform:  rotate(270deg) translate(100px, 100px);
+                background: #9300ff;
+                border-radius: 50px;
+            }
+            100% {
+                transform: rotate(360deg) translate(100px, 100px) ;
+                background: #000;
+                border-radius: 0px;
+            }
+        }
+        @keyframes cimg {
+            0% {
+                background-image: url(http://ru-an.info/Photo/QNews/n29876/1.jpg);
+            }
+            25%{
+                background-image: url(http://s00.yaplakal.com/pics/pics_original/4/6/8/8310864.jpg);
+            }
+            50%{
+                background-image: url(http://hronika.info/uploads/posts/2016-01/1452736497_yumor12.jpg);
+            }
+            75%{
+                background-image: url(http://toppictures.ru/content/medium/4a221b9ffbcd2fa9b55c6beceb379597.jpeg);
+            }
+            100% {
+                background-image: url(http://ru-an.info/Photo/QNews/n29876/1.jpg);
+            }
+        }
+        @keyframes 1zad{
+            0% {
+                background-color:#f80c0c;
+                width: 20px;
+                height: 20px;
+            }
+            25%{
+                background-color:#150cf8;
+                width: 40px;
+                height: 40px;
+            }
+            50%{
+                background-color:#0cf81e;
+                width: 60px;
+                height: 60px;
+            }
+            75%{
+                background-color:#e6f80c;
+                width: 80px;
+                height: 80px;
+            }
+            100% {
+                background-color:#100101;
+                width: 100px;
+                height: 100px;
+            }
+        }
+        }
+        body, html{margin: 0;}
+        .wallpaper{
+            width: 50vh;
+            height: 50vh;
+            margin: 0;
+            background: #000 50%/cover no-repeat;
+            animation: cimg 5s infinite;
+        }
+        
+        
+        .b {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            left:10vw;
+            top:160vh;
+        }
+        
+        .m {
+            width: 500px;
+            height: 500px;
+            margin: 50px;
+            
+        }
+        
+        .anim1 {
+            animation: cpos 10s infinite  linear ;
+            background: #000;
+        }
+        
+        .anim2 {
+            animation: cpos 10s infinite  linear -2.5s;
+            background: #102bf7;
+        }
+        
+        .anim3 {
+            animation: cpos 10s infinite  linear -5s ;
+            background: #00ff45;
+        }
+        
+        .anim4 {
+            animation: cpos 10s infinite  linear -7.5s ;
+            background: #ff0000;
+        }
+        
+        .anim5 {
+            animation: cpos 10s infinite  linear -8s ;
+            background: #9300ff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>ЗАДАНИЕ 1</h2>
+    <div class="m">
+    
+    </div>
+    <h2>ЗАДАНИЕ 2</h2>
+    <div class="m">
+    <div class="wallpaper"></div>
+    </div>
+    <h2>ЗАДАНИЕ 3</h2>
+    <div class="m">
+    <div class="b anim1"></div>
+    <div class="b anim2"></div>
+    <div class="b anim3"></div>
+    <div class="b anim4"></div>
+    </div>
+    <h2>ЗАДАНИЕ 4</h2>
+
+</body>
+</html>
