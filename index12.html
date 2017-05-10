@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Галерея красивых картинок</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <style>@import url('https://fonts.googleapis.com/css?family=Bad+Script|Open+Sans&subset=cyrillic');
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body *::selection {
+    background-color: rgba(0, 207, 255, 0.5);
+}
+
+h1 {
+    font-family: 'Bad Script', 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+header {
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px 20px 20px 40px;
+    color: #000;
+}
+
+main {
+    margin-left: 4vw;
+}
+
+nav {
+    display: none;
+}
+
+.img_cont {
+    display: block;
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.img {
+    height: 72vw;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.i1 {
+    background-image: url('http://artmisto.com/uploads/posts/2010-02/1264979506_30_01_2010_0481113001264857708_robert-finale.jpg');
+}
+
+.i2 {
+    background-image: url('https://cdn.playbuzz.com/cdn/9848ba3e-e032-412f-94df-75c6b1d56c23/7acd13d3-c517-4c5e-ae9f-f6056e2f3e8e.jpg');
+}
+
+.i3 {
+    background-image: url('http://slg1703.ru/kartiny/a_kartiny-pic/samara/spiros-07.jpg');
+}
+
+.i4 {
+    background-image: url('http://davinci72.ru/images/sampledata/%D0%A5%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BF%D0%B5%D0%B9%D0%B7%D0%B0%D0%B6/2994.jpg');
+}
+
+.i5 {
+    background-image: url('http://img-fotki.yandex.ru/get/9301/64843573.2ad/0_b98e6_a59d2657_orig.jpg');
+}
+
+.i6 {
+    background-image: url('http://ib-travel.ru/wp-content/uploads/2016/02/meks4.jpg');
+}
+
+.i7 {
+    background-image: url('http://www.lifeguide.com.ua/wp-content/uploads/2014/10/Samye-krasivye-peshhery-mira-10.jpg');
+}
+
+.i8 {
+    background-image: url('http://wallpapershome.ru/images/pages/ico_h/2215.jpg');
+}
+
+.i9 {
+    background-image: url('http://econet.ru/uploads/pictures/69232/original_infiniti-synaptiq-01.jpg');
+}
+
+.banner,
+.display {
+    display: none;
+}
+
+@media(min-width:768px) {
+    /*portrait tablet*/
+    h1 {
+        font-size: 3rem;
+    }
+    nav {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        display: inline-block;
+        margin: 10px;
+        padding: 0;
+    }
+    a {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #111;
+    }
+    .img_cont {
+        display: inline-block;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: content-box;
+        width: 25vw;
+        height: calc(20vw + 90px);
+        overflow: hidden;
+        vertical-align: top;
+    }
+    .img_cont:hover {
+        background-color: #bbb;
+    }
+    .img_cont:active {
+        background-color: #999;
+    }
+    .img_cont:target {
+        border: thick solid #0B0819;
+    }
+    .img {
+        height: 20vw;
+        width: 25vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cl_btn {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .l_btn {
+        position: absolute;
+        left: 20px;
+        top: calc( 50% - 32px);
+    }
+    .r_btn {
+        position: absolute;
+        right: 20px;
+        top: calc( 50% - 32px);
+    }
+    .banner {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 40vw;
+        left: 0;
+        top: calc( 50vh - 20vw);
+        background: #0B0819;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+        color: #000;
+    }
+    .b_image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 35vw;
+        width: 43.75vw;
+        top: 2.5vw;
+        left: 28.125vw;
+        transition: transform 2s;
+    }
+    .ignore_transition {
+        transition: none;
+    }
+    .display {
+        display: block;
+    }
+    .b_left {
+        transform: perspective(35vw) translate3d(-100vw, 0, 0) rotateY(-90deg);
+    }
+    .b_right {
+        transform: perspective(35vw) translate3d(100vw, 0, 0) rotateY(90deg);
+    }
+}</style>
+</head>
+
+<body>
+    <header>
+        <h1> Галерея красивых картинок</h1>
+        <nav>
+            <ul>
+                <li><a href="#img1">Городские пейзажи</a></li>
+                <li><a href="#img5">Пещеры</a></li>
+                <li><a href="#img8">Суперкары</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="banner" id="b">
+            <div class="b_image i1" id="b_i">
+            </div>
+            <div class="b_image b_right" id="b_in">
+            </div>
+            <img class="cl_btn" id="cl" src="https://cdn1.iconfinder.com/data/icons/general-9/500/close-64.png" alt="close button">
+            <img class="l_btn" id="l" src="https://cdn1.iconfinder.com/data/icons/general-9/500/left_arrow-64.png" alt="left button">
+            <img class="r_btn" id="r" src="https://cdn1.iconfinder.com/data/icons/general-9/500/right_arrow-64.png" alt="right button">
+        </div>
+        <div class="img_cont" id="img1">
+            <div class="img i1"></div>
+            <p>Представляем вашему вниманию <b>городские пейзажи</b> Роберта Файнели </p>
+        </div>
+        <div class="img_cont" id="img2">
+            <div class="img i2"></div>
+            <p>Еще больше картинок в жанре <b>городской пейзаж</b></p>
+        </div>
+        <div class="img_cont" id="img3">
+            <div class="img i3"></div>
+            <p>Еще больше картинок в жанре <b>городской пейзаж</b></p>
+        </div>
+        <div class="img_cont" id="img4">
+            <div class="img i4"></div>
+            <p>Еще больше картинок в жанре <b>городской пейзаж</b></p>
+        </div>
+        <div class="img_cont" id="img5">
+            <div class="img i5"></div>
+            <p><b>Пещера</b> светлячков (Новая Зеландия)</p>
+        </div>
+        <div class="img_cont" id="img6">
+            <div class="img i6"></div>
+            <p>Еще больше картинок в жанре <b>фотографии пещер</b></p>
+        </div>
+        <div class="img_cont" id="img7">
+            <div class="img i7"></div>
+            <p>Пещера Мраморная входит в пятерку красивейших <b>пещер мира</b></p>
+        </div>
+        <div class="img_cont" id="img8">
+            <div class="img i8"></div>
+            <p><b>Cуперкар</b>, концепт, спорткар, Ламбо, Lamborghini Egoista</p>
+        </div>
+        <div class="img_cont" id="img9">
+            <div class="img i9"></div>
+            <p>Гоночный <b>суперкар-трансформер</b>, который превращается в багги и самолёт</p>
+        </div>
+    </main>
+    <script>
+        var currI = 1;
+        var oldI = 1;
+        var listenEvents = true;
+        img1.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 1;
+            oldI = 1;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i1');
+            b.classList.add('display');
+        });
+        img2.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 2;
+            oldI = 2;
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i2');
+            b.classList.add('display');
+        });
+        img3.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 3;
+            oldI = 3;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i3');
+            b.classList.add('display');
+        });
+        img4.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 4;
+            oldI = 4;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i4');
+            b.classList.add('display');
+        });
+        img5.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 5;
+            oldI = 5;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i5');
+            b.classList.add('display');
+        });
+        img6.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 6;
+            oldI = 6;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i6');
+            b.classList.add('display');
+        });
+        img7.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 7;
+            oldI = 7;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i7');
+            b.classList.add('display');
+        });
+        img8.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 8;
+            oldI = 8;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i8');
+            b.classList.add('display');
+        });
+        img9.addEventListener('click', function(e) {
+            if (!listenEvents) return;
+            currI = 9;
+            oldI = 9;
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i1');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i8');
+            b_i.classList.add('i9');
+            b.classList.add('display');
+        });
+        r.addEventListener('click', function() {
+            if (listenEvents) {
+                listenEvents = false;
+                b_i.classList.remove('ignore_transition');
+                b_in.classList.remove('ignore_transition');
+                b_i.classList.add('b_left');
+                if (currI < 9) currI++;
+                var c = "i" + currI;
+                b_in.classList.add(c);
+                b_in.classList.remove('b_right');
+                b_i.addEventListener('transitionend', function() {
+                    var sOldI = "i" + oldI; //not sold but old type string))
+                    var sCurrI = "i" + currI;
+                    b_i.classList.remove(sOldI);
+                    b_i.classList.add(sCurrI);
+                    oldI = currI;
+                    b_in.classList.remove(sCurrI);
+                    b_i.classList.add('ignore_transition');
+                    b_in.classList.add('ignore_transition');
+                    b_i.classList.remove('b_left');
+                    b_in.classList.add('b_right');
+                    listenEvents = true;
+                });
+            }
+        });
+        l.addEventListener('click', function() {
+            if (listenEvents) {
+                listenEvents = false;
+                b_i.classList.remove('ignore_transition');
+                b_in.classList.remove('ignore_transition');
+                b_i.classList.add('b_right');
+                if (currI > 1) currI--;
+                var c = "i" + currI;
+                b_in.classList.add(c);
+                b_in.classList.remove('b_right');
+                b_i.addEventListener('transitionend', function() {
+                    var sOldI = "i" + oldI; //not sold but old type string))
+                    var sCurrI = "i" + currI;
+                    b_i.classList.remove(sOldI);
+                    b_i.classList.add(sCurrI);
+                    oldI = currI;
+                    b_in.classList.remove(sCurrI);
+                    b_i.classList.add('ignore_transition');
+                    b_in.classList.add('ignore_transition');
+                    b_i.classList.remove('b_right');
+                    b_in.classList.add('b_right');
+                    listenEvents = true;
+                });
+            }
+        });
+        cl.addEventListener('click', function(e) {
+            b.classList.remove('display');
+            b_i.classList.remove('ignore_transition');
+            b_in.classList.remove('ignore_transition');
+            b_i.classList.remove('i2');
+            b_i.classList.remove('i3');
+            b_i.classList.remove('i4');
+            b_i.classList.remove('i5');
+            b_i.classList.remove('i6');
+            b_i.classList.remove('i7');
+            b_i.classList.remove('i8');
+            b_i.classList.remove('i9');
+            b_i.classList.add('i1');
+            b_in.classList.remove('i2');
+            b_in.classList.remove('i3');
+            b_in.classList.remove('i4');
+            b_in.classList.remove('i1');
+            b_in.classList.remove('i5');
+            b_in.classList.remove('i6');
+            b_in.classList.remove('i7');
+            b_in.classList.remove('i8');
+            b_in.classList.remove('i9');
+            b_i.classList.remove('b_left');
+            b_in.classList.add('b_right');
+        });
+    </script>
+</body>
+
+</html>
